@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles can go below */
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
