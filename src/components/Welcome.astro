@@ -52,6 +52,63 @@ const resources = [
 ];
 ---
 
+<header class="sticky top-0 bg-white dark:bg-gray-900 shadow-sm z-30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <!-- Logo/Brand -->
+      <div class="flex items-center">
+        <a href="/" class="flex-shrink-0 flex items-center">
+          <span class="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">OSS Communities</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="/#tips" class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 px-3 py-2 text-sm font-medium">Weekly Tips</a>
+        <a href="/#shoutouts" class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 px-3 py-2 text-sm font-medium">Shoutouts</a>
+        <a href="/#courses" class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 px-3 py-2 text-sm font-medium">Courses</a>
+        <a href="/#resources" class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 px-3 py-2 text-sm font-medium">Resources</a>
+        <a href="/about" class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 px-3 py-2 text-sm font-medium">About</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <button type="button" id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500">
+          <span class="sr-only">Open main menu</span>
+          <!-- Icon for menu (3 horizontal lines) -->
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="hidden md:hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="/#tips" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">Weekly Tips</a>
+      <a href="/#shoutouts" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">Shoutouts</a>
+      <a href="/#courses" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">Courses</a>
+      <a href="/#resources" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">Resources</a>
+      <a href="/about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    }
+  });
+</script>
+
 <Layout title="Open Source Communities">
   <!-- Hero Section -->
   <section class="min-h-[80vh] flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
@@ -134,8 +191,8 @@ const resources = [
               Recognize someone amazing in the open source community
             </p>
             <div class="flex justify-center">
-              <a 
-                href="https://airtable.com/embed/YOUR_FORM_ID" 
+              <a
+                href="https://airtable.com/embed/YOUR_FORM_ID"
                 target="_blank"
                 class="px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:opacity-90 transition-all"
               >
@@ -230,19 +287,4 @@ const resources = [
   </section>
 </Layout>
 
-<style>
-  .animate-float {
-    animation: float 8s ease-in-out infinite;
-  }
-  .animate-float-delayed {
-    animation: float 12s ease-in-out infinite 2s;
-  }
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0) scale(1);
-    }
-    50% {
-      transform: translateY(-20px) scale(1.05);
-    }
-  }
-</style>
+</initial_code>
