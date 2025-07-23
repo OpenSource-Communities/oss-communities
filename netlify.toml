@@ -5,12 +5,11 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Redirect rules for SPA-like behavior (optional)
+# Redirect rules for SPA-like behavior
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  conditions = {Role = ["admin"]}
 
 # Optional: Handle form submissions (if you plan to add forms later)
 # [[redirects]]
