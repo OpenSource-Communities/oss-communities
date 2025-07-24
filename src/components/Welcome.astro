@@ -50,6 +50,11 @@ const resources = [
 ];
 ---
 
+<!-- Skip link for accessibility -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-700 text-white px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-white">
+  Skip to main content
+</a>
+
 <header class="sticky top-0 bg-white dark:bg-gray-900 shadow-sm z-30">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-16">
@@ -145,6 +150,9 @@ const resources = [
     <span class="text-lg">⚠️</span>
   </div>
 </div>
+
+<!-- Main Content -->
+<main id="main-content">
 <!-- Hero Section -->
 <section class="min-h-[80vh] flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 z-0"></div>
@@ -320,3 +328,4 @@ const resources = [
       </div>
     </div>
   </section>
+</main>
