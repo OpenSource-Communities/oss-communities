@@ -1,0 +1,38 @@
+---
+import { contributorTip, maintainerTip } from '../data/weeklyTips.json';
+---
+<section id="tips" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center flex items-center justify-center gap-3">
+      <span>This Week's Tips</span>
+      <span class="text-4xl">🧠</span>
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-[1.02]">
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-2 rounded-lg">
+              <span class="text-xl">👩‍💻</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Contributor Tip</h3>
+          </div>
+          <p class="text-gray-800 dark:text-gray-200 mb-4">{contributorTip.content}</p>
+          <p class="text-sm text-gray-700 dark:text-gray-300 italic">#{contributorTip.week} - {contributorTip.date}</p>
+        </div>
+      </div>
+      
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-[1.02]">
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-2 rounded-lg">
+              <span class="text-xl">🛠️</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Maintainer Tip</h3>
+          </div>
+          <p class="text-gray-800 dark:text-gray-200 mb-4">{maintainerTip.content}</p>
+          <p class="text-sm text-gray-700 dark:text-gray-300 italic">#{maintainerTip.week} - {maintainerTip.date}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+{
+  "contributorTip": {
+    "week": 1,
+    "date": "May 1, 2023",
+    "content": "When starting to contribute to a new project, look for issues labeled 'good first issue' or 'beginner friendly' to get familiar with the codebase."
+  },
+  "maintainerTip": {
+    "week": 1,
+    "date": "May 1, 2023",
+    "content": "Consider creating a comprehensive CONTRIBUTING.md file that helps new contributors understand your project's workflow and expectations."
+  }
+}
