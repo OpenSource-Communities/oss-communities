@@ -1,0 +1,36 @@
+---
+import courses from '../data/courses.json';
+---
+<section id="courses" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center flex items-center justify-center gap-3">
+      <span>Level Up With Our Courses</span>
+      <span class="text-4xl">📚</span>
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {courses.map(course => (
+        <a 
+          href={course.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${course.title}: ${course.description} (opens in new window)`}
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 group"
+        >
+          <div class="p-8">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="text-4xl">{course.icon}</div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors">{course.title}</h3>
+            </div>
+            <p class="text-gray-800 dark:text-gray-200 mb-6">{course.description}</p>
+            <div class="flex items-center text-purple-700 dark:text-purple-300 font-medium">
+              <span>Start learning</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
