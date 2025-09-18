@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
-import '../styles/global.css'; // Import global styles
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 
 export interface Props {
   pageTitle: string;
@@ -17,10 +18,13 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <div class="max-w-7xl mx-auto mt-4 px-4 sm:px-6 lg:px-8">
-      <main>
-        <slot />
-      </main>
+    <div class="flex flex-col min-h-screen">
+      <div class="max-w-7xl mt-4 px-4 sm:px-6 lg:px-8 flex-grow">
+        <main>
+          <slot />
+        </main>
+      </div>
+      <Footer />
     </div>
   </body>
 
