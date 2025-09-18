@@ -1,0 +1,35 @@
+---
+import Header from '../components/Header.astro';
+import '../styles/global.css'; // Import global styles
+
+export interface Props {
+  pageTitle: string;
+}
+
+const { pageTitle } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <div class="max-w-7xl mx-auto mt-4 px-4 sm:px-6 lg:px-8">
+      <main>
+        <slot />
+      </main>
+    </div>
+  </body>
+
+  <style is:global>
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  </style>
+</html>
