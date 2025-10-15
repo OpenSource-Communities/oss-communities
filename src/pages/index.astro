@@ -1,8 +1,18 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Courses from '../components/Courses.astro';
+import Resources from '../components/Resources.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Open Source Communities">
-	<Welcome />
+	<main id="main-content">
+		<Header />
+		<Hero />
+		<Courses />
+		<Resources />
+		<Footer />
+	</main>
 </Layout>
